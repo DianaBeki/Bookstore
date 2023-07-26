@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="navigation">
       <h1>Bookstore CMS</h1>
-      <ul className="navList">
+      <ul className="nav-list">
         <CustomLink className="books" to="/">BOOKS</CustomLink>
         <CustomLink className="category" to="/Categories">CATEGORIES</CustomLink>
       </ul>

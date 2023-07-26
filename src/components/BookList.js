@@ -1,14 +1,21 @@
 import React from 'react';
-import Book from './Book';
+import { useSelector } from 'react-redux';
 import BookForm from './BookForm';
+import Book from './Book';
 
 function Books() {
+  const { books } = useSelector((store) => store.books);
   return (
     <>
-      <ul className="title-author">
-        <Book tittle="Pride and Prejuduce" author="Jane Austen" />
-        <Book tittle="To Kill a Mockingbird" author="Harper Lee" />
-        <Book tittle="The Great Gatsby" author="F.Scott Fitzgerald" />
+      <ul className="list">
+        {books.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            title={book.title}
+            author={book.author}
+          />
+        ))}
       </ul>
       <BookForm />
     </>
