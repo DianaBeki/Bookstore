@@ -22,7 +22,7 @@ function Books() {
 
   return (
     <>
-      <ul>
+      <ul className="listBooks">
         {Object.entries(books).map(([id, book]) => (
           <Book
             key={id}
