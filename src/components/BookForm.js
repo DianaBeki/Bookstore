@@ -16,7 +16,7 @@ function BookForm() {
     e.preventDefault();
     if (title && author) {
       dispatch(addBook({
-        item_id: nanoid(),
+        id: nanoid(),
         title,
         author,
       }));
