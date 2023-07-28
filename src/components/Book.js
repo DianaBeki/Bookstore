@@ -8,7 +8,7 @@ function Book({ id, title, author }) {
   const dispatch = useDispatch();
 
   const handleDelete = () => {
-    // Dispatch the removeBook action with the book ID
+    console.log(id);
     dispatch(removeBook(id));
   };
 
@@ -31,7 +31,7 @@ function Book({ id, title, author }) {
 export default Book;
 
 Book.propTypes = {
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
 };
